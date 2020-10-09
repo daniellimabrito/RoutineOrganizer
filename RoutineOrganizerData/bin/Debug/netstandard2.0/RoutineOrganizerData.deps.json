@@ -11,6 +11,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore.Design": "3.1.8",
+          "Microsoft.EntityFrameworkCore.InMemory": "3.1.8",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.8",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
           "NETStandard.Library": "2.0.3"
@@ -82,6 +83,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "3.1.8.0",
+            "fileVersion": "3.100.820.42012"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/3.1.8": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
             "assemblyVersion": "3.1.8.0",
             "fileVersion": "3.100.820.42012"
           }
@@ -368,6 +380,13 @@
       "sha512": "sha512-nFsL0L2CdadJ9dmSsmYlDZ1dFWQEr9zCWZ+oI4OOLtoS7gU2XPZiEhtvipAFzfSadx3XkteX/4fgdbM7wTub9A==",
       "path": "microsoft.entityframeworkcore.design/3.1.8",
       "hashPath": "microsoft.entityframeworkcore.design.3.1.8.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/3.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iS72RzZ+GZ0WBsLqv9jgF/Zhnerkj61RhaOj7gyMvV63GWKw/MI+7+42T+mIx6UlQ4HcrBlDdTHiOe3KdsxPwg==",
+      "path": "microsoft.entityframeworkcore.inmemory/3.1.8",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.3.1.8.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/3.1.8": {
       "type": "package",

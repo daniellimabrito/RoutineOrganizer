@@ -1,7 +1,7 @@
 
 namespace RoutineOrganizerData.Context
 {
-    public class DataContext : DbContext
+    public class DataContext
     {
         
     }

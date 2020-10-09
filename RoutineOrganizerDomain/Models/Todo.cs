@@ -6,6 +6,6 @@ namespace RoutineOrganizerDomain.Models
     {
          public Guid Id {get;set;}
         public string Description { get; set; }
-        public TodoType  Type { get; set; }
+        public TodoTypes  Type { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-public enum TodoType
+public enum TodoTypes
 {
     TodoNo,
     TodoYes

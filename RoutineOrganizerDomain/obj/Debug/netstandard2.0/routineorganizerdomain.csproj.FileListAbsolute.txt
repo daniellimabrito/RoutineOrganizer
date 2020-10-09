@@ -1,0 +1,8 @@
+/Users/danielbrito/Projects/RoutineOrganizer/routineorganizerdomain/bin/Debug/netstandard2.0/routineorganizerdomain.deps.json
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/bin/Debug/netstandard2.0/routineorganizerdomain.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/bin/Debug/netstandard2.0/routineorganizerdomain.pdb
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/obj/Debug/netstandard2.0/routineorganizerdomain.csprojAssemblyReference.cache
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/obj/Debug/netstandard2.0/routineorganizerdomain.AssemblyInfoInputs.cache
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/obj/Debug/netstandard2.0/routineorganizerdomain.AssemblyInfo.cs
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/obj/Debug/netstandard2.0/routineorganizerdomain.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/obj/Debug/netstandard2.0/routineorganizerdomain.pdb
