@@ -365,6 +365,16 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
+      },
+      "RoutineOrganizerDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RoutineOrganizerDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RoutineOrganizerDomain.dll": {}
+        }
       }
     }
   },
@@ -1224,6 +1234,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "RoutineOrganizerDomain/1.0.0": {
+      "type": "project",
+      "path": "../RoutineOrganizerDomain/RoutineOrganizerDomain.csproj",
+      "msbuildProject": "../RoutineOrganizerDomain/RoutineOrganizerDomain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1233,7 +1248,8 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.8",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "RoutineOrganizerDomain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1259,7 +1275,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj": {
+              "projectPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

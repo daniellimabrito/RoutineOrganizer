@@ -6,3 +6,6 @@
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/obj/Debug/netstandard2.0/RoutineOrganizerData.AssemblyInfo.cs
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/obj/Debug/netstandard2.0/RoutineOrganizerData.dll
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/obj/Debug/netstandard2.0/RoutineOrganizerData.pdb
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/bin/Debug/netstandard2.0/RoutineOrganizerDomain.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/bin/Debug/netstandard2.0/RoutineOrganizerDomain.pdb
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/obj/Debug/netstandard2.0/RoutineOrganizerData.csproj.CopyComplete
