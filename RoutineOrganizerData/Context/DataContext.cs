@@ -10,8 +10,6 @@ namespace RoutineOrganizerData.Context
         public DbSet<ActivityDay> Activities {get;set;}
 
         public DbSet<Todo> Todos {get;set;}
-
-
-                    
+        
     }
 }
