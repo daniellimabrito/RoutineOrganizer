@@ -1,32 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/RoutineOrganizerData.csproj": {}
+    "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdata\\routineorganizerdata.csproj": {}
   },
   "projects": {
-    "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/RoutineOrganizerData.csproj": {
+    "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdata\\routineorganizerdata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/RoutineOrganizerData.csproj",
-        "projectName": "RoutineOrganizerData",
-        "projectPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/RoutineOrganizerData.csproj",
-        "packagesPath": "/Users/danielbrito/.nuget/packages/",
-        "outputPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/obj/",
+        "projectUniqueName": "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdata\\routineorganizerdata.csproj",
+        "projectName": "routineorganizerdata",
+        "projectPath": "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdata\\routineorganizerdata.csproj",
+        "packagesPath": "C:\\Users\\dnl\\.nuget\\packages\\",
+        "outputPath": "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdata\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/danielbrito/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dnl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj": {
-                "projectPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj"
+              "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdomain\\routineorganizerdomain.csproj": {
+                "projectPath": "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdomain\\routineorganizerdomain.csproj"
               }
             }
           }
@@ -79,26 +84,31 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj": {
+    "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdomain\\routineorganizerdomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj",
-        "projectName": "RoutineOrganizerDomain",
-        "projectPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj",
-        "packagesPath": "/Users/danielbrito/.nuget/packages/",
-        "outputPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/obj/",
+        "projectUniqueName": "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdomain\\routineorganizerdomain.csproj",
+        "projectName": "routineorganizerdomain",
+        "projectPath": "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdomain\\routineorganizerdomain.csproj",
+        "packagesPath": "C:\\Users\\dnl\\.nuget\\packages\\",
+        "outputPath": "D:\\daniel\\projects\\RoutineOrganizer\\routineorganizerdomain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/danielbrito/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dnl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,7 +142,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

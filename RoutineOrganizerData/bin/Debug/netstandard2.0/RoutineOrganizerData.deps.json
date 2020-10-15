@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "RoutineOrganizerData/1.0.0": {
+      "routineorganizerdata/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore.Design": "3.1.8",
@@ -15,10 +15,10 @@
           "Microsoft.EntityFrameworkCore.Relational": "3.1.8",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
           "NETStandard.Library": "2.0.3",
-          "RoutineOrganizerDomain": "1.0.0"
+          "routineorganizerdomain": "1.0.0"
         },
         "runtime": {
-          "RoutineOrganizerData.dll": {}
+          "routineorganizerdata.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -310,7 +310,7 @@
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "assemblyVersion": "4.0.6.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "4.700.20.12001"
           }
         }
       },
@@ -325,15 +325,15 @@
           }
         }
       },
-      "RoutineOrganizerDomain/1.0.0": {
+      "routineorganizerdomain/1.0.0": {
         "runtime": {
-          "RoutineOrganizerDomain.dll": {}
+          "routineorganizerdomain.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "RoutineOrganizerData/1.0.0": {
+    "routineorganizerdata/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -555,7 +555,7 @@
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
-    "RoutineOrganizerDomain/1.0.0": {
+    "routineorganizerdomain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
