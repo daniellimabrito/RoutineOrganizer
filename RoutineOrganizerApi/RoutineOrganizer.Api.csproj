@@ -4,5 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="microsoft.entityframeworkcore.inmemory" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RoutineOrganizerData\RoutineOrganizerData.csproj" />
+    <ProjectReference Include="..\RoutineOrganizerDomain\RoutineOrganizerDomain.csproj" />
+  </ItemGroup>
+
 
 </Project>

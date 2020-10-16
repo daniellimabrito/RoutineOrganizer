@@ -7,9 +7,12 @@ namespace RoutineOrganizerData.Context
     {
         public DataContext(DbContextOptions<DataContext> options) :base(options) {}
 
-        public DbSet<ActivityDay> Activities {get;set;}
+        //public DbSet<ActivityDay> Activities {get;set;}
 
         public DbSet<Todo> Todos {get;set;}
+
+        public DbSet<Agenda> Agendas {get;set;}
         
+
     }
 }

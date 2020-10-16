@@ -1,5 +1,8 @@
-public enum TodoTypes
+namespace RoutineOrganizerDomain.ValueObject
 {
-    TodoNo,
-    TodoYes
+    public enum TodoTypes
+    {
+        TodoNo,
+        TodoYes
+    }
 }

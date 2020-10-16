@@ -1,4 +1,5 @@
 using System;
+using RoutineOrganizerDomain.ValueObject;
 
 namespace RoutineOrganizerDomain.Models
 {
