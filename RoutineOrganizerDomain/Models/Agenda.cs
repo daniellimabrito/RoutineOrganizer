@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace RoutineOrganizerDomain.Models
 {
     public class Agenda
@@ -10,9 +11,9 @@ namespace RoutineOrganizerDomain.Models
         public string Name { get; set; }
         public string Notes { get; set; }
         public DateTime Period { get; set; }
-        public  List<string> Activities {get;set;} 
-        public  List<string> Projects {get;set;} 
-        public  List<string> Priorities  {get;set;} 
-        public  List<string> Prouds {get;set;} 
+        public virtual ICollection<ActivityDay> Activities {get;set;} 
+        public  virtual ICollection<Project> Projects {get;set;} 
+        public  virtual ICollection<Priority> Priorities  {get;set;} 
+        public  virtual ICollection<Proud> Prouds {get;set;} 
     }
 }

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RoutineOrganizerDomain.Models;
 
-namespace RoutineOrganizerData.Context
+namespace RoutineOrganizerInfra.Context
 {
     public class DataContext : DbContext
     {

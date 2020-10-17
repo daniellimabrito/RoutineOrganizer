@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RoutineOrganizerData\RoutineOrganizerData.csproj" />
+    <ProjectReference Include="..\RoutineOrganizerInfra\RoutineOrganizerInfra.csproj" />
     <ProjectReference Include="..\RoutineOrganizerDomain\RoutineOrganizerDomain.csproj" />
   </ItemGroup>
 
