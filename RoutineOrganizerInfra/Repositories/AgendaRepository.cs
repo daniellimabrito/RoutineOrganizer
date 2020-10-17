@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using RoutineOrganizerDomain.Interfaces;
 using RoutineOrganizerDomain.Models;
 using RoutineOrganizerInfra.Context;
@@ -39,7 +40,9 @@ namespace RoutineOrganizerInfra.Repositories
 
         public void Update(Agenda obj)
         {
-            _context.Agendas.Update(obj);
+           // _context.Agendas.Update(obj);
+            _context.Entry(obj).State = EntityState.Modified;
+
         }
     }
 }

@@ -32,7 +32,8 @@ namespace RoutineOrganizerApi
         {
             services.AddControllers();
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("database"));
-            services.AddTransient(IAgendaRepository, AgendaRepository);
+            services.AddTransient<IAgendaRepository, AgendaRepository>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
