@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using RoutineOrganizerDomain.Models;
-using RoutineOrganizerData.Context;
+using RoutineOrganizerInfra.Context;
 using System;
+using RoutineOrganizerDomain.Interfaces;
+
 
 namespace RoutineOrganizerApi.Controllers
 {

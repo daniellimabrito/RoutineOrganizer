@@ -252,7 +252,17 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "RoutineOrganizerData/1.0.0": {
+      "RoutineOrganizerDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RoutineOrganizerDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RoutineOrganizerDomain.dll": {}
+        }
+      },
+      "RoutineOrganizerInfra/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -263,20 +273,10 @@
           "RoutineOrganizerDomain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/RoutineOrganizerData.dll": {}
+          "bin/placeholder/RoutineOrganizerInfra.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RoutineOrganizerData.dll": {}
-        }
-      },
-      "RoutineOrganizerDomain/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/RoutineOrganizerDomain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RoutineOrganizerDomain.dll": {}
+          "bin/placeholder/RoutineOrganizerInfra.dll": {}
         }
       }
     }
@@ -745,21 +745,21 @@
         "version.txt"
       ]
     },
-    "RoutineOrganizerData/1.0.0": {
-      "type": "project",
-      "path": "../RoutineOrganizerData/RoutineOrganizerData.csproj",
-      "msbuildProject": "../RoutineOrganizerData/RoutineOrganizerData.csproj"
-    },
     "RoutineOrganizerDomain/1.0.0": {
       "type": "project",
       "path": "../RoutineOrganizerDomain/RoutineOrganizerDomain.csproj",
       "msbuildProject": "../RoutineOrganizerDomain/RoutineOrganizerDomain.csproj"
+    },
+    "RoutineOrganizerInfra/1.0.0": {
+      "type": "project",
+      "path": "../RoutineOrganizerInfra/RoutineOrganizerInfra.csproj",
+      "msbuildProject": "../RoutineOrganizerInfra/RoutineOrganizerInfra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "RoutineOrganizerData >= 1.0.0",
       "RoutineOrganizerDomain >= 1.0.0",
+      "RoutineOrganizerInfra >= 1.0.0",
       "microsoft.entityframeworkcore.inmemory >= 3.1.9"
     ]
   },
@@ -787,11 +787,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/RoutineOrganizerData.csproj": {
-              "projectPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerData/RoutineOrganizerData.csproj"
-            },
             "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj": {
               "projectPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerDomain/RoutineOrganizerDomain.csproj"
+            },
+            "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerInfra/RoutineOrganizerInfra.csproj": {
+              "projectPath": "/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerInfra/RoutineOrganizerInfra.csproj"
             }
           }
         }

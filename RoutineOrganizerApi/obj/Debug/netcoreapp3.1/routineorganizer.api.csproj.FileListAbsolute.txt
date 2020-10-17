@@ -55,8 +55,8 @@ D:/daniel/projects/RoutineOrganizer/routineorganizerapi/obj/Debug/netcoreapp3.1/
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
-/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerData.dll
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerDomain.dll
-/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerData.pdb
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerDomain.pdb
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/obj/Debug/netcoreapp3.1/RoutineOrganizer.Api.csproj.CopyComplete
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerInfra.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerInfra.pdb

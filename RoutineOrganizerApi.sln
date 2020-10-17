@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "routineorganizerdata", "routineorganizerdata\routineorganizerdata.csproj", "{1912811B-175A-473F-A7A6-BE4AAAE736E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "routineorganizerinfra", "routineorganizerinfra\routineorganizerdinfra.csproj", "{1912811B-175A-473F-A7A6-BE4AAAE736E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "routineorganizerdomain", "routineorganizerdomain\routineorganizerdomain.csproj", "{4D35FCDB-EEEA-4B1E-8A35-FB29A2A4CEB3}"
 EndProject
