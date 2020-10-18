@@ -15,5 +15,6 @@ namespace RoutineOrganizerDomain.Models
         public  virtual ICollection<Project> Projects {get;set;} 
         public  virtual ICollection<Priority> Priorities  {get;set;} 
         public  virtual ICollection<Proud> Prouds {get;set;} 
+
     }
 }
