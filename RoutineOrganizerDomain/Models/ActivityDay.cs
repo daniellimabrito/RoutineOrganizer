@@ -7,5 +7,6 @@ namespace RoutineOrganizerDomain.Models
         public Guid Id {get;set;}
         public DateTime Day { get; set; }
         public string Interval { get; set; }
+
     }
 }
