@@ -31,6 +31,7 @@ namespace RoutineOrganizerApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("database"));
             services.AddTransient<IAgendaRepository, AgendaRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
@@ -47,6 +48,8 @@ namespace RoutineOrganizerApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
 
             app.UseAuthorization();
 
