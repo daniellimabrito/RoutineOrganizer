@@ -22,7 +22,7 @@ export class QuotesComponent implements OnInit {
 
   url = 'https://type.fit/api/quotes';
   quotes: any;
-  randomQuote: any;
+  randomQuote: any = { text: '', author: ''};
 
   constructor(private http: HttpClient) { }
 
@@ -36,6 +36,7 @@ export class QuotesComponent implements OnInit {
      // console.log(this.quotes);
       const obj = JSON.stringify(this.quotes);
       this.getRandomQuote(obj);
+      console.log(this.randomQuote);
     }, error => {
       console.log(error);
     }
@@ -46,6 +47,7 @@ export class QuotesComponent implements OnInit {
     const obj = JSON.parse(data);
 
     this.randomQuote = obj[Math.floor(Math.random() * obj.length)];
+
   }
 
 

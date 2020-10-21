@@ -293,6 +293,16 @@
       visibility: hidden;
     }
   }
+
+  .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: lightblue;
+   color: white;
+   text-align: center;
+} 
 </style>
 
 
@@ -318,6 +328,10 @@
       </div>
     </nav> 
 
-<div class="container">
+<div class="container" style="padding-bottom: 95px;">
   <router-outlet></router-outlet>  
+</div>
+
+<div class="footer">
+    <p><br></p>
 </div>

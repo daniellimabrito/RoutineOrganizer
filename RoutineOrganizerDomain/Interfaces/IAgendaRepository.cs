@@ -11,6 +11,8 @@ namespace RoutineOrganizerDomain.Interfaces
          void Update(Agenda obj);
          IEnumerable<Agenda> GetAll();
          Agenda GetById(Guid id);
+         Agenda GetByPeriod(DateTime id);
+
 
     }
 }

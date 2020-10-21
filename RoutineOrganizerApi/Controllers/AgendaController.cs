@@ -21,38 +21,25 @@ namespace RoutineOrganizerApi.Controllers
         {
            _repo = repo;
 
-          
-
-       /*      objAgenda.Add( new Agenda() { 
-                Id = Guid.NewGuid(), Name = "Test", Period = DateTime.Now, 
-                Notes = DateTime.Now.ToString("MMMM dd, yyyy"),
-                Projects = new List<string>() {"Find a new job", "Buy a car", "Travel"}, 
-                Activities = new List<string>(){"YOGA", "BJJ", "Office"},
-                Priorities = new List<string>(){"Go to the grocery"},
-                Prouds = new List<string>(){"Diet still good"}
-                
-                });
-
-            objAgenda.Add( new Agenda() { 
-                Id = Guid.NewGuid(), Name = "Test 2", Period = DateTime.Now, 
-                Notes = DateTime.Now.ToString("yyyy MMMM"),
-                Projects = new List<string>() {"Paint the wall", "Fix the oven", "Clean the house"}, 
-                Activities = new List<string>(){"Bar", "School", "Pool"},
-                Priorities = new List<string>(){"Pick-up Tomas"},
-                Prouds = new List<string>(){"Ran 5km"}
-                
-                });                */
         }
-
-     //   public AgendaController(DataContext context)
-     //   {
-      //      _dataContext = context;
-      //  }
-
+        
         [HttpGet]
         public IEnumerable<Agenda> Get([FromServices] IAgendaRepository agendaRepository)
         {
             return  agendaRepository.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        [Route("GetAgenda")]
+        public Agenda GetAgenda(Guid id, [FromServices] IAgendaRepository agendaRepository) {
+            return agendaRepository.GetById(id);
+        }
+
+        [HttpGet("GetByPeriod/{id}")]
+        [Route("GetByPeriod")]
+        public Agenda GetByPeriod(string id, [FromServices] IAgendaRepository agendaRepository) {
+            var obj = Convert.ToDateTime(id);
+            return agendaRepository.GetByPeriod(obj);
         }
 
         [HttpPost]
