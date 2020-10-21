@@ -13,22 +13,23 @@
       
     </div>
     <div class="col-9">
-        <form>
+        <form #formAgenda="ngForm" (ngSubmit)="onSubmit(formAgenda)">
             <div class="row">
 
                 <div class="col-6">
     
                     <div class="form-group">
                             <label for="FormControlTextareaThisMonthsPriority">THIS MONTH'S PRIORITY</label>
-                            <textarea class="form-control" id="FormControlTextareaThisMonthsPriority" rows="8"></textarea>
-                    </div>
+                            <textarea class="form-control" id="FormControlTextareaThisMonthsPriority" rows="6" name="priority" [(ngModel)]="agendas.priorities"></textarea>
+                    </div>               
+
                 </div>
     
                 <div class="col-6">
     
                         <div class="form-group">
-                                <label for="FormControlTextareaThisMonthsBest">THIS MONTH'S BEST</label>
-                                <textarea class="form-control" id="FormControlTextareaThisMonthsBest" rows="8"></textarea>
+                                <label for="FormControlTextareaThisMonthsBest">THIS MONTH'S ACTIVITIES</label>
+                                <textarea class="form-control" id="FormControlTextareaThisMonthsBest" rows="6" name="activities" [(ngModel)]="agendas.activities" ></textarea>
                         </div>
                 </div>
             </div>     
@@ -38,7 +39,7 @@
             
                         <div class="form-group">
                                 <label for="FormControlTextareaThisMonthsProject">THIS MONTH'S PROJECTS</label>
-                                <textarea class="form-control" id="FormControlTextareaThisMonthsProject" rows="8"></textarea>
+                                <textarea class="form-control" id="FormControlTextareaThisMonthsProject" rows="6" name="project" [(ngModel)]="agendas.projects"></textarea>
                         </div>
                     </div>
             
@@ -46,7 +47,7 @@
             
                             <div class="form-group">
                                     <label for="FormControlTextareaThisMonthsProud">I AM PROUD OF...</label>
-                                    <textarea class="form-control" id="FormControlTextareaThisMonthsProud" rows="8"></textarea>
+                                    <textarea class="form-control" id="FormControlTextareaThisMonthsProud" rows="6" name="proud" [(ngModel)]="agendas.prouds"></textarea>
                             </div>
                     </div>
             </div>    
@@ -54,10 +55,15 @@
                 <div class="col-12">
                     <div class="form-group">
                             <label for="FormControlTextareaThisMonthsNote">NOTES & INSPIRATION</label>
-                            <textarea class="form-control" id="FormControlTextareaThisMonthsNote" rows="5"></textarea>                    
+                            <textarea class="form-control" id="FormControlTextareaThisMonthsNote" rows="5"  name="notes" [(ngModel)]="agendas.notes"></textarea>                  
                     </div>
                 </div>
-            </div>       
+            </div> 
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>      
         </form>
     </div>
 

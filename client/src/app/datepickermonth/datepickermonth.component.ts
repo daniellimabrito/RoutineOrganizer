@@ -8,7 +8,10 @@ import { BsDatepickerConfig, BsDatepickerViewMode } from 'ngx-bootstrap/datepick
 })
 export class DatepickermonthComponent implements OnInit {
 
-  datePickerValue: Date = new Date(2020, 7);
+   obj = Date.now();
+   date1 = new Date(this.obj); // (2009, 10, 10);  // 2009-11-10
+   month = this.date1.toLocaleString('default', { month: 'long' });
+  datePickerValue: Date = new Date(this.obj);
   dateRangePickerValue: Date[];
   range1: Date = new Date(2020, 5);
   range2: Date = new Date(2020, 8);
@@ -18,10 +21,13 @@ export class DatepickermonthComponent implements OnInit {
 
   bsConfig: Partial<BsDatepickerConfig>;
 
-  constructor() {
+  constructor(private bsDatepickerConfig: BsDatepickerConfig) {
+    this.bsDatepickerConfig.dateInputFormat = 'MMMM YYYY';
   }
 
   ngOnInit(): void {
+
+    console.log(this.month);
     this.dateRangePickerValue = [this.range1, this.range2];
     this.bsConfig = Object.assign({}, {
       minMode : this.minMode,
