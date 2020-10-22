@@ -4,6 +4,7 @@
                  class="form-control"
                  [bsConfig]="bsConfig"
                  #dp="bsDatepicker"
-                 bsDatepicker [(bsValue)]="datePickerValue">
+                 bsDatepicker [(bsValue)]="datePickerValue"
+                 (bsValueChange)="onChange($event)">
         </div>
 </div>

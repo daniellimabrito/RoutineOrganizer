@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { BsDatepickerConfig, BsDatepickerViewMode } from 'ngx-bootstrap/datepicker';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-datepickermonth',
@@ -8,10 +9,13 @@ import { BsDatepickerConfig, BsDatepickerViewMode } from 'ngx-bootstrap/datepick
 })
 export class DatepickermonthComponent implements OnInit {
 
+  @Output() selectedDate = new EventEmitter<Date>();
    obj = Date.now();
+   formatDate: any;
    date1 = new Date(this.obj); // (2009, 10, 10);  // 2009-11-10
    month = this.date1.toLocaleString('default', { month: 'long' });
-  datePickerValue: Date = new Date(this.obj);
+   datePickerValue: Date = new Date(this.obj);
+  @Input() datePicker: Date = new Date(this.obj);
   dateRangePickerValue: Date[];
   range1: Date = new Date(2020, 5);
   range2: Date = new Date(2020, 8);
@@ -21,7 +25,7 @@ export class DatepickermonthComponent implements OnInit {
 
   bsConfig: Partial<BsDatepickerConfig>;
 
-  constructor(private bsDatepickerConfig: BsDatepickerConfig) {
+  constructor(private bsDatepickerConfig: BsDatepickerConfig, private datePipe: DatePipe) {
     this.bsDatepickerConfig.dateInputFormat = 'MMMM YYYY';
   }
 
@@ -33,6 +37,17 @@ export class DatepickermonthComponent implements OnInit {
       minMode : this.minMode,
       containerClass: this.colorTheme
     });
+  }
+
+  public onChange(date: Date) {
+    // console.log(date);
+    this.formatDate = this.datePipe.transform(date, 'yyyy-MM-dd');
+    this.updateDate(this.formatDate);
+  }
+
+  updateDate(value: Date) {
+    console.log(value);
+    this.selectedDate.emit(value);
   }
 
 }
