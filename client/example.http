@@ -1,0 +1,18 @@
+http://localhost:3000/agenda
+
+
+###
+
+POST http://localhost:3000/agenda HTTP/1.1
+content-type: application/json
+
+{
+    "id": "255f4658-0ad6-4250-af90-8e862c2af535",
+    "name": "Nov Test2",
+    "notes": "Cool",
+    "period": "2020-12-16T20:01:33.987429-08:00",
+    "activities": "SOCCER / BJJ",
+    "projects": "Find a new job/ Buy a car",
+    "priorities": "Go to the grocery",
+    "prouds": "Diet still good"
+}

@@ -1,0 +1,24 @@
+{
+  "agenda": [
+    {
+      "id": "7cadeeec-9fcd-480e-8d49-8e9884ef9591",
+      "name": "Nov Test",
+      "notes": "Always be thankful 2",
+      "period": "2020-11-16T20:01:33.987429-08:00",
+      "activities": "YOGA / BJJ",
+      "projects": "Find a new job/ Buy a car",
+      "priorities": "Go to the grocery",
+      "prouds": "Diet still good"
+    },
+    {
+      "id": "255f4658-0ad6-4250-af90-8e862c2af535",
+      "name": "Nov Test2",
+      "notes": "Cool",
+      "period": "2020-12-16T20:01:33.987429-08:00",
+      "activities": "SOCCER / BJJ",
+      "projects": "Find a new job/ Buy a car",
+      "priorities": "Go to the grocery",
+      "prouds": "Diet still good"
+    }
+  ]
+}

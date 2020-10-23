@@ -12,6 +12,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { DatepickermonthComponent } from './datepickermonth/datepickermonth.component';
 import { AgendaService } from './_services/agenda.service';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { AgendaService } from './_services/agenda.service';
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot()
   ],
-  providers: [AgendaService],
+  providers: [AgendaService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

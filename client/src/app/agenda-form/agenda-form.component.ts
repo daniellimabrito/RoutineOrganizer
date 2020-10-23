@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AgendaService } from '../_services/agenda.service';
 import { Agenda } from '../_models/Agenda';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-agenda-form',
@@ -19,19 +20,29 @@ export class AgendaFormComponent implements OnInit {
   constructor(private agendaService: AgendaService ) {}
 
   ngOnInit() {
-    this.agendaService.getAgendaById('445d26da-3b1f-4a95-8649-7198973c165c')
-      .subscribe( data => {
-        this.agendas = data;
-        console.log(data);
-      }, error => {
-        console.log(error);
-      });
-    console.log(this.agendas);
+    const obj: number = Date.now();
+    const strDate = formatDate(obj, 'yyyy-MM-dd', 'en-US');
+    console.log('Data: ' + strDate);
+    this.onChangeDate(strDate);
   }
 
 
   onSubmit(form) {
     console.log(form);
+  }
+
+  onChangeDate(event: any) {
+    console.log(event);
+
+    this.agendaService.getAgendaByPeriod(event)
+    .subscribe( data => {
+      this.agendas = data;
+      console.log(data);
+    }, error => {
+      console.log(error);
+    });
+    console.log(this.agendas);
+
   }
 
 }
