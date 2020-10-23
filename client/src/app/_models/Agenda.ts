@@ -8,9 +8,9 @@ export interface Agenda {
     name: string;
     notes: string;
     period: string;
-    activities: string; // Activity[];
-    priorities: string; // Priority[];
-    projects: string; // Project[];
-    prouds: string; // Proud[];
+    activities?: string; // Activity[];
+    priorities?: string; // Priority[];
+    projects?: string; // Project[];
+    prouds?: string; // Proud[];
 
 }

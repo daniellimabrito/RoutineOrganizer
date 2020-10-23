@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-3">
             <div class="col-12">
-                    <label>2021 JANUARY</label>
+                    <label></label>
             </div>
             <app-datepickermonth (selectedDate)="onChangeDate($event)"></app-datepickermonth>                            
       
@@ -15,12 +15,15 @@
     <div class="col-9">
         <form #formAgenda="ngForm" (ngSubmit)="onSubmit(formAgenda)">
             <div class="row">
+                <div class="col-12">
+                    <input type="hidden" name="id" />   
+                </div>
 
                 <div class="col-6">
     
                     <div class="form-group">
                             <label for="FormControlTextareaThisMonthsPriority">THIS MONTH'S PRIORITY</label>
-                            <textarea class="form-control" id="FormControlTextareaThisMonthsPriority" rows="6" name="priority" [(ngModel)]="agendas.priorities"></textarea>
+                            <textarea class="form-control" id="FormControlTextareaThisMonthsPriority" rows="6" name="priorities" [(ngModel)]="agendas.priorities"></textarea>
                     </div>               
 
                 </div>
@@ -39,7 +42,7 @@
             
                         <div class="form-group">
                                 <label for="FormControlTextareaThisMonthsProject">THIS MONTH'S PROJECTS</label>
-                                <textarea class="form-control" id="FormControlTextareaThisMonthsProject" rows="6" name="project" [(ngModel)]="agendas.projects"></textarea>
+                                <textarea class="form-control" id="FormControlTextareaThisMonthsProject" rows="6" name="projects" [(ngModel)]="agendas.projects"></textarea>
                         </div>
                     </div>
             
@@ -47,7 +50,7 @@
             
                             <div class="form-group">
                                     <label for="FormControlTextareaThisMonthsProud">I AM PROUD OF...</label>
-                                    <textarea class="form-control" id="FormControlTextareaThisMonthsProud" rows="6" name="proud" [(ngModel)]="agendas.prouds"></textarea>
+                                    <textarea class="form-control" id="FormControlTextareaThisMonthsProud" rows="6" name="prouds" [(ngModel)]="agendas.prouds"></textarea>
                             </div>
                     </div>
             </div>    

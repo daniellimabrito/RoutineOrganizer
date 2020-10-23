@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getAgendas();
+    console.log('AppComponent agenda:');
     console.log(this.agendas);
   }
 
