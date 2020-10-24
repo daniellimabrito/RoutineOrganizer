@@ -23,8 +23,12 @@ constructor(private http: HttpClient) { }
         return this.http.get<Agenda>(this.url + '/GetByPeriod/' + id);
     }
 
-    udpateAgenda(id: string, agenda: Agenda) {
-        return  this.http.put( this.url + '/' + id, agenda);
+    addAgenda(agenda: Agenda) {
+        return  this.http.post( this.url, agenda);
+    }
+
+    udpateAgenda(agenda: Agenda) {
+        return  this.http.put( this.url, agenda);
     }
 
     deleteAgenda(id: string) {

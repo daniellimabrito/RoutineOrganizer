@@ -32,14 +32,25 @@ namespace RoutineOrganizerApi.Controllers
         [HttpGet("{id}")]
         [Route("GetAgenda")]
         public Agenda GetAgenda(Guid id, [FromServices] IAgendaRepository agendaRepository) {
-            return agendaRepository.GetById(id);
+
+            var agenda = agendaRepository.GetById(id);
+            if (agenda == null)
+                return new Agenda();
+
+            return agenda;
         }
 
         [HttpGet("GetByPeriod/{id}")]
         [Route("GetByPeriod")]
         public Agenda GetByPeriod(string id, [FromServices] IAgendaRepository agendaRepository) {
             var obj = Convert.ToDateTime(id);
-            return agendaRepository.GetByPeriod(obj);
+            var agenda = agendaRepository.GetByPeriod(obj);
+
+            if (agenda == null)
+                return new Agenda(); // {  Name = null, Notes = null, Period = DateTime.Now, Activities = null, Projects = null, Priorities = null, Prouds = null };
+
+            return agenda;
+
         }
 
         [HttpPost]
@@ -57,9 +68,9 @@ namespace RoutineOrganizerApi.Controllers
             return Ok(objAgenda);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         [Route("")]
-        public IActionResult Put(Guid id, [FromBody] Agenda agenda,
+        public IActionResult Put([FromBody] Agenda agenda,
             [FromServices] IAgendaRepository agendaRepository,
             [FromServices] IUnitOfWork uow
         ) 
@@ -67,14 +78,15 @@ namespace RoutineOrganizerApi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var objAgenda = agendaRepository.GetById(id);
+         //   var objAgenda = agendaRepository.GetById(id);
 
-            objAgenda.Name = agenda.Name;
+          //  objAgenda.Name = agenda.Name;
 
-            agendaRepository.Update(objAgenda);
+
+            agendaRepository.Update(agenda);
             uow.Commit();
 
-            return Ok(objAgenda);
+            return Ok(agenda);
 
         }
 

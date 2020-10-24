@@ -16,6 +16,8 @@ export class AgendaFormComponent implements OnInit {
   //                projects: {id: '', description: ''}, priorities: {id: '', description: ''} , prouds: {id: '', description: ''}  }];
 
   agendas: Agenda;
+  isUpdate: boolean;
+  emptyId = '00000000-0000-0000-0000-000000000000';
 
   constructor(private agendaService: AgendaService ) {}
 
@@ -28,7 +30,20 @@ export class AgendaFormComponent implements OnInit {
 
 
   onSubmit(form) {
-    console.log(form);
+    const agenda: Agenda = form.values;
+    console.log(agenda.priorities);
+    if (agenda.id === this.emptyId) {
+      console.log('add');
+      this.agendaService.addAgenda(agenda);
+    }
+    else {
+      console.log('update');
+
+      this.agendaService.udpateAgenda(agenda);
+
+    }
+
+    console.log(agenda);
   }
 
   onChangeDate(event: any) {
@@ -44,5 +59,6 @@ export class AgendaFormComponent implements OnInit {
     console.log(this.agendas);
 
   }
+
 
 }
