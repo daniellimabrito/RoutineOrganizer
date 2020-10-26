@@ -24,7 +24,13 @@ constructor(private http: HttpClient) { }
     }
 
     addAgenda(agenda: Agenda) {
-        return  this.http.post( this.url, agenda);
+        console.log('service');
+        console.log(agenda);
+        return  this.http.post( this.url, agenda).subscribe(
+            success => console.log('success'),
+            error => console.error(error),
+            () => console.log('Request completed')
+        );
     }
 
     udpateAgenda(agenda: Agenda) {

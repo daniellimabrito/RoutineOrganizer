@@ -13,10 +13,10 @@
       
     </div>
     <div class="col-9">
-        <form #formAgenda="ngForm" (ngSubmit)="onSubmit(formAgenda)">
+        <form #formAgenda="ngForm" (ngSubmit)="onSubmit(formAgenda.value)">
             <div class="row">
                 <div class="col-12">
-                    <input type="hidden" name="id" />   
+                    <input type="hidden" name="id" [(ngModel)]="agendas.id"/>   
                 </div>
 
                 <div class="col-6">
@@ -64,9 +64,10 @@
             </div> 
             <div class="row">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!formAgenda.valid">Save</button>
                 </div>
             </div>      
+            <app-form-debug [form]="formAgenda"></app-form-debug>
         </form>
     </div>
 

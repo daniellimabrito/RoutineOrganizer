@@ -13,6 +13,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { DatepickermonthComponent } from './datepickermonth/datepickermonth.component';
 import { AgendaService } from './_services/agenda.service';
 import { DatePipe } from '@angular/common';
+import { FormDebugComponent } from './form-debug/form-debug.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DatePipe } from '@angular/common';
     AppComponent,
     AgendaFormComponent,
     QuotesComponent,
-    DatepickermonthComponent
+    DatepickermonthComponent,
+    FormDebugComponent
   ],
   imports: [
     BrowserModule,

@@ -60,8 +60,8 @@ namespace RoutineOrganizerInfra.Repositories
 
         public void Update(Agenda obj)
         {
-           // _context.Agendas.Update(obj);
-            _context.Entry(obj).State = EntityState.Modified;
+            _context.Agendas.Update(obj);
+           // _context.Entry(obj).State = EntityState.Modified;
 
         }
     }

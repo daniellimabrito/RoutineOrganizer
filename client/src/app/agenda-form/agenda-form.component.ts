@@ -31,7 +31,9 @@ export class AgendaFormComponent implements OnInit {
 
   onSubmit(form) {
     const agenda: Agenda = form.values;
-    console.log(agenda.priorities);
+    console.log('submit');
+    console.log(form);
+
     if (agenda.id === this.emptyId) {
       console.log('add');
       this.agendaService.addAgenda(agenda);
@@ -43,7 +45,6 @@ export class AgendaFormComponent implements OnInit {
 
     }
 
-    console.log(agenda);
   }
 
   onChangeDate(event: any) {
