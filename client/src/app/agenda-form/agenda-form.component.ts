@@ -4,6 +4,8 @@ import { environment } from 'src/environments/environment';
 import { AgendaService } from '../_services/agenda.service';
 import { Agenda } from '../_models/Agenda';
 import { formatDate } from '@angular/common';
+import { AlertifyService } from '../_services/alertify.service';
+import { typeWithParameters } from '@angular/compiler/src/render3/util';
 
 @Component({
   selector: 'app-agenda-form',
@@ -18,8 +20,9 @@ export class AgendaFormComponent implements OnInit {
   agendas: Agenda;
   isUpdate: boolean;
   emptyId = '00000000-0000-0000-0000-000000000000';
+  currentDate: any;
 
-  constructor(private agendaService: AgendaService ) {}
+  constructor(private agendaService: AgendaService, private alertify: AlertifyService ) {}
 
   ngOnInit() {
     const obj: number = Date.now();
@@ -31,17 +34,28 @@ export class AgendaFormComponent implements OnInit {
 
   onSubmit(form) {
     const agenda: Agenda = form.values;
+    this.agendas = Object.assign({}, form);
+    this.agendas.period = this.currentDate;
+
     console.log('submit');
     console.log(form);
 
-    if (agenda.id === this.emptyId) {
+    if (this.agendas.id === this.emptyId) {
       console.log('add');
-      this.agendaService.addAgenda(agenda);
+      this.agendaService.addAgenda(this.agendas)
+      .subscribe(
+        success => this.alertify.success('Insert success'),
+        error => this.alertify.error(error),
+        () => this.onChangeDate(this.currentDate) );
     }
     else {
       console.log('update');
 
-      this.agendaService.udpateAgenda(agenda);
+      this.agendaService.udpateAgenda(this.agendas)
+      .subscribe(
+        success => this.alertify.success('Update success'),
+        error => this.alertify.error(error),
+        () => console.log('Request completed') );
 
     }
 
@@ -53,6 +67,7 @@ export class AgendaFormComponent implements OnInit {
     this.agendaService.getAgendaByPeriod(event)
     .subscribe( data => {
       this.agendas = data;
+      this.currentDate = event;
       console.log(data);
     }, error => {
       console.log(error);
