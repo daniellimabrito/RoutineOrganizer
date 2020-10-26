@@ -9,7 +9,7 @@ export interface Agenda {
     notes: string;
     period: string;
     activities?: string; // Activity[];
-    priorities?: string; // Priority[];
+    priorities: string; // Priority[];
     projects?: string; // Project[];
     prouds?: string; // Proud[];
 

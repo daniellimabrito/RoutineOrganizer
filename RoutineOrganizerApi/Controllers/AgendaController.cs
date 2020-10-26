@@ -75,6 +75,9 @@ namespace RoutineOrganizerApi.Controllers
             [FromServices] IUnitOfWork uow
         ) 
         {
+        
+        try
+        {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -82,12 +85,15 @@ namespace RoutineOrganizerApi.Controllers
 
           //  objAgenda.Name = agenda.Name;
 
-
             agendaRepository.Update(agenda);
             uow.Commit();
 
             return Ok(agenda);
-
+        }
+                catch (System.Exception ex)
+            {
+                return Content(ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
