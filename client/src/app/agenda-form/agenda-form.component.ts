@@ -76,5 +76,15 @@ export class AgendaFormComponent implements OnInit {
 
   }
 
+  deleteAgenda() {
+
+    this.alertify.confirm('Are you sure that you want to delete it?',
+        () => this.agendaService.deleteAgenda(this.agendas.id)
+      .subscribe(
+        success => this.alertify.success('Delete success'),
+        error => this.alertify.error(error)
+      ));
+  }
+
 
 }
