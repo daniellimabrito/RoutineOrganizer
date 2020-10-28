@@ -64,7 +64,11 @@
             </div> 
             <div class="row">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary" [disabled]="!formAgenda.valid">Save</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!formAgenda.valid || !formAgenda.dirty"><i class="fa fa-save"></i></button>
+                    <span style="padding-left: 10px;">
+                        <button (click)="deleteAgenda()" class="btn btn-primary" [disabled]="!formAgenda.valid"><i class="fa fa-trash"></i></button>
+                    </span>
+
                 </div>
             </div>      
             <app-form-debug [form]="formAgenda"></app-form-debug>
