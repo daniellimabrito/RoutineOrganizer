@@ -9,7 +9,7 @@ using RoutineOrganizerDomain.Interfaces;
 namespace RoutineOrganizerApi.Controllers
 {
     [ApiController]
-    [Route("v1/agenda")]
+    [Route("v1/[controller]")]
     public class AgendaController : ControllerBase
     {
      //   private readonly DataContext _dataContext;
