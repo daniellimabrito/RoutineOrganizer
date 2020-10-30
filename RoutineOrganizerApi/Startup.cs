@@ -34,6 +34,8 @@ namespace RoutineOrganizerApi
             services.AddCors();
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("database"));
             services.AddTransient<IAgendaRepository, AgendaRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IAuthRepository, AuthRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
         }
 

@@ -10,6 +10,7 @@ namespace RoutineOrganizerInfra.Context
         public DbSet<Todo> Todos {get;set;}
 
         public DbSet<Agenda> Agendas {get;set;}
+         public DbSet<User> Users{get;set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
