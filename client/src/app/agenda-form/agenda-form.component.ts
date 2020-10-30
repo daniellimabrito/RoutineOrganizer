@@ -6,6 +6,8 @@ import { Agenda } from '../_models/Agenda';
 import { formatDate } from '@angular/common';
 import { AlertifyService } from '../_services/alertify.service';
 import { typeWithParameters } from '@angular/compiler/src/render3/util';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-agenda-form',
@@ -14,66 +16,73 @@ import { typeWithParameters } from '@angular/compiler/src/render3/util';
 })
 export class AgendaFormComponent implements OnInit {
 
-  // agendas1: [ {id: '', name: '', notes: 'afsfs', period: '', activities: { id: '', day: '', interval: ''},
-  //                projects: {id: '', description: ''}, priorities: {id: '', description: ''} , prouds: {id: '', description: ''}  }];
-
+  agendaForm: FormGroup;
   agendas: Agenda;
   isUpdate: boolean;
   emptyId = '00000000-0000-0000-0000-000000000000';
   currentDate: any;
+  isDeleteMode: boolean;
+  id: string;
 
-  constructor(private agendaService: AgendaService, private alertify: AlertifyService ) {}
+  emptyAgenda: Agenda = { id : this.emptyId, name : '', activities : '', priorities : '', projects : '', notes : '', period: ''};
+
+  constructor(private agendaService: AgendaService, private alertify: AlertifyService, private route: ActivatedRoute,
+              private fbAgenda: FormBuilder ) {}
 
   ngOnInit() {
+
+    this.createAgendaForm();
     const obj: number = Date.now();
     const strDate = formatDate(obj, 'yyyy-MM-dd', 'en-US');
-    console.log('Data: ' + strDate);
+   // console.log('Data: ' + strDate);
     this.onChangeDate(strDate);
   }
 
+  createAgendaForm() {
+    this.agendaForm = this.fbAgenda.group({
+      id: [this.emptyId],
+      name: [''],
+      notes: [null],
+      activities: [null],
+      projects: [null],
+      prouds: [null],
+      priorities: [null]
+    });
+  }
 
-  onSubmit(form) {
-    const agenda: Agenda = form.values;
-    this.agendas = Object.assign({}, form);
+  onSubmit() {
+   // const agenda: Agenda = this.agendaForm.value;
+    this.agendas = Object.assign({}, this.agendaForm.value);
     this.agendas.period = this.currentDate;
 
-    console.log('submit');
-    console.log(form);
-
     if (this.agendas.id === this.emptyId) {
-      console.log('add');
-      this.agendaService.addAgenda(this.agendas)
-      .subscribe(
-        success => this.alertify.success('Insert success'),
-        error => this.alertify.error(error),
-        () => this.onChangeDate(this.currentDate) );
-    }
-    else {
-      console.log('update');
-
-      this.agendaService.udpateAgenda(this.agendas)
-      .subscribe(
-        success => this.alertify.success('Update success'),
-        error => this.alertify.error(error),
-        () => console.log('Request completed') );
-
-    }
-
+        this.agendaService.addAgenda(this.agendas)
+        .subscribe(
+          success => this.alertify.success('Insert success'),
+          error => this.alertify.error(error),
+          () => this.onChangeDate(this.currentDate) );
+      }
+      else {
+        this.agendaService.udpateAgenda(this.agendas)
+        .subscribe(
+          success => this.alertify.success('Update success'),
+          error => this.alertify.error(error),
+          () => this.onChangeDate(this.currentDate) );
+      }
   }
 
   onChangeDate(event: any) {
-    console.log(event);
-
     this.agendaService.getAgendaByPeriod(event)
     .subscribe( data => {
+      if (data == null) {
+        data = this.emptyAgenda;
+      }
       this.agendas = data;
       this.currentDate = event;
-      console.log(data);
+      this.agendaForm.reset(this.agendas);
     }, error => {
       console.log(error);
     });
-    console.log(this.agendas);
-
   }
 
   deleteAgenda() {
@@ -81,8 +90,18 @@ export class AgendaFormComponent implements OnInit {
     this.alertify.confirm('Are you sure that you want to delete it?',
         () => this.agendaService.deleteAgenda(this.agendas.id)
       .subscribe(
-        success => this.alertify.success('Delete success'),
-        error => this.alertify.error(error)
+        success => {
+          this.alertify.success('Delete success');
+          this.isDeleteMode = true;
+        },
+        error => {
+          console.log(error);
+          this.alertify.error(error);
+        },
+        () => {
+          this.agendas = this.emptyAgenda;
+          this.onChangeDate(this.currentDate);
+        }
       ));
   }
 
