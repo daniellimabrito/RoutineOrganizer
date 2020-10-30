@@ -13,17 +13,17 @@
       
     </div>
     <div class="col-9">
-        <form #formAgenda="ngForm" (ngSubmit)="onSubmit(formAgenda.value)">
+        <form [formGroup]="agendaForm" (ngSubmit)="onSubmit()" id="formAgenda">
             <div class="row">
                 <div class="col-12">
-                    <input type="hidden" name="id" [(ngModel)]="agendas.id"/>   
+                    <input type="hidden" formControlName="id"/>   
                 </div>
 
                 <div class="col-6">
     
                     <div class="form-group">
                             <label for="FormControlTextareaThisMonthsPriority">THIS MONTH'S PRIORITY</label>
-                            <textarea class="form-control" id="FormControlTextareaThisMonthsPriority" rows="6" name="priorities" [(ngModel)]="agendas.priorities"></textarea>
+                            <textarea class="form-control" id="FormControlTextareaThisMonthsPriority" rows="6" formControlName="priorities"></textarea>
                     </div>               
 
                 </div>
@@ -32,7 +32,7 @@
     
                         <div class="form-group">
                                 <label for="FormControlTextareaThisMonthsBest">THIS MONTH'S ACTIVITIES</label>
-                                <textarea class="form-control" id="FormControlTextareaThisMonthsBest" rows="6" name="activities" [(ngModel)]="agendas.activities" ></textarea>
+                                <textarea class="form-control" id="FormControlTextareaThisMonthsBest" rows="6" formControlName="activities" ></textarea>
                         </div>
                 </div>
             </div>     
@@ -42,7 +42,7 @@
             
                         <div class="form-group">
                                 <label for="FormControlTextareaThisMonthsProject">THIS MONTH'S PROJECTS</label>
-                                <textarea class="form-control" id="FormControlTextareaThisMonthsProject" rows="6" name="projects" [(ngModel)]="agendas.projects"></textarea>
+                                <textarea class="form-control" id="FormControlTextareaThisMonthsProject" rows="6" formControlName="projects" ></textarea>
                         </div>
                     </div>
             
@@ -50,7 +50,7 @@
             
                             <div class="form-group">
                                     <label for="FormControlTextareaThisMonthsProud">I AM PROUD OF...</label>
-                                    <textarea class="form-control" id="FormControlTextareaThisMonthsProud" rows="6" name="prouds" [(ngModel)]="agendas.prouds"></textarea>
+                                    <textarea class="form-control" id="FormControlTextareaThisMonthsProud" rows="6" formControlName="prouds"></textarea>
                             </div>
                     </div>
             </div>    
@@ -58,21 +58,23 @@
                 <div class="col-12">
                     <div class="form-group">
                             <label for="FormControlTextareaThisMonthsNote">NOTES & INSPIRATION</label>
-                            <textarea class="form-control" id="FormControlTextareaThisMonthsNote" rows="5"  name="notes" [(ngModel)]="agendas.notes"></textarea>                  
+                            <textarea class="form-control" id="FormControlTextareaThisMonthsNote" rows="5"  formControlName="notes"></textarea>                  
                     </div>
                 </div>
             </div> 
-            <div class="row">
+                 
+        </form>
+        <div class="row">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary" [disabled]="!formAgenda.valid || !formAgenda.dirty"><i class="fa fa-save"></i></button>
+                    <button form="formAgenda" class="btn btn-primary" [disabled]="!agendaForm.valid"><i class="fa fa-save"></i></button>
                     <span style="padding-left: 10px;">
-                        <button (click)="deleteAgenda()" class="btn btn-primary" [disabled]="!formAgenda.valid"><i class="fa fa-trash"></i></button>
+                        <button (click)="deleteAgenda()" class="btn btn-primary" [disabled]="!agendaForm.valid"><i class="fa fa-trash"></i></button>
                     </span>
 
                 </div>
-            </div>      
-            <app-form-debug [form]="formAgenda"></app-form-debug>
-        </form>
+        </div>         
+        
+         <app-form-debug [form]="agendaForm"></app-form-debug>
     </div>
 
 </div>

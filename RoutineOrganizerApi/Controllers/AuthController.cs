@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RoutineOrganizerDomain.Interfaces;
@@ -20,6 +21,8 @@ namespace RoutineOrganizerApi.Controllers
         {
             if (await _repo.UserExists(user.UserName))
                 return BadRequest("User already exists");
+
+                user.Created = DateTime.Now;
 
             var createdUser = await _repo.Register(user, user.Password);
 

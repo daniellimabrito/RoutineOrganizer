@@ -47,7 +47,7 @@ namespace RoutineOrganizerApi.Controllers
             var agenda = agendaRepository.GetByPeriod(obj);
 
             if (agenda == null)
-                return new Agenda(); // {  Name = null, Notes = null, Period = DateTime.Now, Activities = null, Projects = null, Priorities = null, Prouds = null };
+                return null; // {  Name = null, Notes = null, Period = DateTime.Now, Activities = null, Projects = null, Priorities = null, Prouds = null };
 
             return agenda;
 
@@ -107,7 +107,7 @@ namespace RoutineOrganizerApi.Controllers
                 agendaRepository.Remove(id);
                 uow.Commit();
 
-                return Ok($"Agenda number {id} removed.");
+                return NoContent(); // Ok($"Agenda number {id} removed.");
             }
                 catch (System.Exception)
             {

@@ -24,8 +24,6 @@ constructor(private http: HttpClient) { }
     }
 
     addAgenda(agenda: Agenda) {
-        console.log('service');
-        console.log(agenda);
         return  this.http.post( this.url, agenda);
     }
 
