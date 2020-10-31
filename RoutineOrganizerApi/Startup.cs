@@ -31,7 +31,17 @@ namespace RoutineOrganizerApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors();
+           // services.AddCors();
+
+			services.AddCors(options =>
+			{
+				options.AddPolicy("AllowAll",
+					p => p.AllowAnyOrigin().
+						AllowAnyHeader().
+						AllowAnyMethod()
+				);
+			});
+
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("database"));
             services.AddTransient<IAgendaRepository, AgendaRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
@@ -44,14 +54,20 @@ namespace RoutineOrganizerApi
         {
             if (env.IsDevelopment())
             {
+                Console.WriteLine("DEV");
                 app.UseDeveloperExceptionPage();
+            }
+            else {
+                Console.WriteLine("PROD");
             }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+           // app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+
+            app.UseCors("AllowAll");
 
             app.UseAuthorization();
 

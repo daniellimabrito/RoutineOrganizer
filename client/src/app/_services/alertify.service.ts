@@ -6,7 +6,14 @@ import * as alertify from 'alertifyjs';
 })
 export class AlertifyService {
 
-constructor() { }
+constructor() {
+  this.setupNotify();
+ }
+
+setupNotify() {
+  alertify.set('notifier', 'delay', 3);
+  alertify.set('notifier', 'position', 'top-center');
+}
 
 confirm(message: string, okCallback: () => any) {
   alertify.confirm(message, (e: any) => {
