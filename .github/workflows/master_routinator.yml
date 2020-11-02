@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'routinator'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_15183659f1bd407d86c2a0d4f90b8c0d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0acda480ce8f4ff38d05a9cf43514572 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
