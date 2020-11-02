@@ -24,7 +24,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o RoutineOrganizer
+      run: dotnet publish -c Release -o Routinator
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -32,4 +32,4 @@ jobs:
         app-name: 'routinator'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0acda480ce8f4ff38d05a9cf43514572 }}
-        package: './RoutineOrganizer'
+        package: './'
