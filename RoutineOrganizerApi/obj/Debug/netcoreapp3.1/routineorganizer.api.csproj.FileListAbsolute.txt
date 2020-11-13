@@ -60,3 +60,8 @@ D:/daniel/projects/RoutineOrganizer/routineorganizerapi/obj/Debug/netcoreapp3.1/
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/obj/Debug/netcoreapp3.1/RoutineOrganizer.Api.csproj.CopyComplete
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerInfra.dll
 /Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/RoutineOrganizerInfra.pdb
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.JWT.dll
+/Users/danielbrito/Projects/RoutineOrganizer/RoutineOrganizerApi/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
