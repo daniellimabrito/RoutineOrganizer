@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkcore.inmemory" Version="3.1.9" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens.JWT" Version="0.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
   </ItemGroup>
 
   <ItemGroup>

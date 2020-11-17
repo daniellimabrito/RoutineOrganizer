@@ -43,6 +43,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens.JWT": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
             "microsoft.entityframeworkcore.inmemory": {
               "target": "Package",
               "version": "[3.1.9, )"
